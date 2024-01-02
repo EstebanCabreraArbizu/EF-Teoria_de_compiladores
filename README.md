@@ -60,7 +60,7 @@ antlr4 -no-listener -visitor shell.g4
 * En ello, ejecutamos nuestro proyecto usando el CMakeList del repositorio con este comando:
 ```
 cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1
-make --build -j8
+make --build build -j8
 ```
 * De esta forma podemos ejecutar nuestro archivo generado dentro de la carpeta build llamada **prog** teniendo como entrado nuestro archivo **simple.k**:
 ```
