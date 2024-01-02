@@ -53,7 +53,7 @@ llvm-15-dev --version
 ## Procedimiento
 * Se creo un archivo antrl4 con la grámatica solicitada, esto es para generar un analizador léxico y sintáctico de forma rápida. Usando estos comandos para generar los tokens, parser y visitor
 ```
-antlr4 -no-listener -visitor ExprParser.g4
+antlr4 -no-listener -visitor shell.g4
 ```
 * Se creo dos visitors que van a manipular los nodos del árbol AST que se genera de nuestra grámatica al igual que el generador de código IR de LLVM
 * Todo ese procesor se va a juntar en nuestro archivo main.cpp
