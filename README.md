@@ -53,14 +53,14 @@ llvm-15-dev --version
 ## Procedimiento
 * Se creo un archivo antrl4 con la grámatica solicitada, esto es para generar un analizador léxico y sintáctico de forma rápida. Usando estos comandos para generar los tokens, parser y visitor
 ```
-antlr4 -no-listener -visitor ExprParser.g4
+antlr4 -no-listener -visitor shell.g4
 ```
 * Se creo dos visitors que van a manipular los nodos del árbol AST que se genera de nuestra grámatica al igual que el generador de código IR de LLVM
 * Todo ese procesor se va a juntar en nuestro archivo main.cpp
 * En ello, ejecutamos nuestro proyecto usando el CMakeList del repositorio con este comando:
 ```
 cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1
-make --build -j8
+cmake --build build -j8
 ```
 * De esta forma podemos ejecutar nuestro archivo generado dentro de la carpeta build llamada **prog** teniendo como entrado nuestro archivo **simple.k**:
 ```
