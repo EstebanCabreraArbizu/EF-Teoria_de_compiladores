@@ -64,3 +64,4 @@ Makefile
 # Custom for clangd
 .cache/
 .vscode
+*workspace
